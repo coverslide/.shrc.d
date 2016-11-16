@@ -1,0 +1,12 @@
+if [ -f "$HOME/.shrc.local" ] ; then
+  source "$HOME/.shrc.local"
+fi
+
+if [ -d "$HOME/.shrc.d" ] ; then
+  for file in "$HOME/.shrc.d"/*.sh ; do
+    source $file
+  done
+fi
+
+# include this in your .bashrc or .zshrc
+# source "$HOME/.shrc"
